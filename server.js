@@ -44,6 +44,22 @@ app.post('/convert', (req, res) => {
             `)
 	}, 2000)
 })
+// Handle GET request for polling example
+let counter = 0
+app.get('/poll', (req, res) => {
+	counter++
+
+	const data = { value: counter }
+
+	res.json(data)
+})
+
+// Handle GET request for weather
+let currentTemeprature = 20
+app.get('/get-temperature', (req, res) => {
+	currentTemeprature += Math.random() * 2 - 1
+	res.send(currentTemeprature.toFixed(1) + '°C')
+})
 
 // Start the server
 app.listen(3000, () => {
