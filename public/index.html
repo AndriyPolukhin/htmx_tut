@@ -8,27 +8,23 @@
 			integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
 			crossorigin="anonymous"
 		></script>
+
 		<script src="https://cdn.tailwindcss.com"></script>
-		<title>HTML Tutorial</title>
+		<title>HTMX Crash Course</title>
 	</head>
-	<body>
-		<div class="text-center">
-			<h1 class="text-2xl font-bold my-5">Simple Request Example</h1>
-			<button
-				hx-get="/users"
-				hx-target="#users"
-				hx-indicator="#loading"
-				hx-vals='{"limit": 5}'
-				class="bg-blue-500 text-white py-2 px-3 my-5 rounded-lg"
-			>
-				Fetch Users
-			</button>
-
-			<span class="htmx-indicator" id="loading">
-				<img src="img/loader.gif" alt="Loading..." class="m-auto h-10" />
-			</span>
-
-			<div id="users"></div>
+	<body class="bg-blue-500">
+		<div
+			class="container mx-auto py-8 max-w-lg p-4 justify-content align-items text-center text-white"
+		>
+			<h1>Here is the list of pages that you should cheeck out</h1>
+			<ul class="list-none list-inside hover:list-disc">
+				<li><a href="polling.html">Pooling </a></li>
+				<li><a href="search.html">Search</a></li>
+				<li><a href="request.html">Request</a></li>
+				<li><a href="polling.html">Profile</a></li>
+				<li><a href="temperature.html">Temperature</a></li>
+				<li><a href="validation.html">Validation</a></li>
+			</ul>
 		</div>
 	</body>
 </html>
